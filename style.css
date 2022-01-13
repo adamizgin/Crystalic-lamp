@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500&family=Lato:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500&family=Lato:wght@300;400;700&family=M+PLUS+Rounded+1c:wght@400;500&display=swap');
 
 * {
 	margin:  0;
@@ -6,6 +6,8 @@
 	font-family: Helvetica, Arial, Sans-Serif;
 	outline: none;
 	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+	tap-highlight-color: transparent;
 }
 
 html, body {
@@ -22,7 +24,6 @@ html, body {
 
 p, li {
 	font-size: 18px;
-	line-height: 25px;
 	margin: 0 0 10px 0;
 }
 
@@ -170,14 +171,14 @@ header i {
 #mobile-menu {
 	width: 100vw;
 	height: 100vh;
-	background: #556688f8;
+	background: #fff;
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: 35px;
+	right: 35px;
 	z-index: -1;
 	border-radius: 50%;
 	transform: translate(50%, -50%) scale(0);
-	transition: transform 350ms ease-in-out, border-radius 550ms ease-in-out;
+	transition: all 450ms ease-in-out, border-radius 600ms ease-in-out;
 }
 
 #mobile-menu-content {
@@ -191,7 +192,7 @@ header i {
 }
 
 #mobile-menu-content * {
-	color: #eee;
+	color: #333;
 }
 
 #mobile-menu-content h2, #mobile-menu-content i {
@@ -199,7 +200,7 @@ header i {
 	width: 100%;
 	padding: 25px;
 	font-size: 30px;
-	border-bottom: 1px solid #fff1;
+	border-bottom: 1px solid #0001;
 	background: transparent;
 	transition: all 250ms ease-in-out;
 }
@@ -231,6 +232,55 @@ header i {
 
 
 
+/* Home section */
+
+#home-section {
+	position: relative;
+	width: 100%;
+	height: calc(100vh - 89px);
+}
+
+#home-section * {
+	color: #fff;
+}
+
+#home-section-background {
+	background: url('images/crystal-lamps-projecting-different-lights-by-touch-and-remote-green+white-and-pink+orange-crystal-light.jpeg');
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 80% 50%;
+	filter: brightness(0.145);
+	position: absolute;
+}
+
+#home-section .center {
+	top: 45%;
+	width: 900px;
+	text-align: center;
+}
+
+h2 {
+	font-size: 70px;
+	font-family: 'Lato';
+	font-weight: 400;
+}
+
+#home-section p {
+	font-size: 30px;
+	font-family: 'Cabin';
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -239,6 +289,40 @@ header i {
 
 
 /* Responsiveness */
+@media screen and (max-width: 1145px) {
+	#home-section .center {
+		width: 800px;
+	}
+	h2 {
+		font-size: 60px;
+	}
+	#home-section p {
+		font-size: 25px;
+	}
+}
+@media screen and (max-width: 980px) {
+	#home-section .center {
+		width: 750px;
+	}
+	h2 {
+		font-size: 55px;
+	}
+	#home-section p {
+		font-size: 25px;
+	}
+}
+@media screen and (max-width: 900px) {
+	#home-section .center {
+		width: 650px;
+	}
+	h2 {
+		font-size: 50px;
+	}
+	#home-section p {
+		font-size: 22px;
+	}
+}
+
 @media screen and (max-width: 770px) {
 	/* Phone screen */
 	.header-right {
@@ -252,6 +336,44 @@ header i {
 	.mobile-shopping-bag {
 		display: block;
 	}
+
+	#home-section .center {
+		width: 85%;
+	}
+	h2 {
+		font-size: 45px;
+	}
+	#home-section p {
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 560px) {
+	h2 {
+		font-size: 40px;
+	}
+	#home-section p {
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	header {
+		padding: 20px;
+	}
+
+	#wrapper {
+		margin-top: 79px;
+	}
+
+	#home-section {
+		height: calc(100vh - 79px);
+	}
+
+	.header-menu-button-wrapper {
+		width: 79px;
+		height: 79px;
+	}
 }
 
 
@@ -262,8 +384,8 @@ header i {
 	}
 
 	.header-menu-button-wrapper {
-		width: 86px;
-		height: 86px;
+		width: 76px;
+		height: 76px;
 	}
 
 	.mobile-shopping-bag {
@@ -280,6 +402,14 @@ header i {
 	.menu-button-line__after {
 		transform: translateY(11px);
 	}
+
+	#wrapper {
+		margin-top: 76px;
+	}
+
+	#home-section {
+		height: calc(100vh - 76px);
+	}
 }
 @media screen and (max-width: 400px) {
 	h1 {
@@ -287,8 +417,8 @@ header i {
 	}
 
 	.header-menu-button-wrapper {
-		width: 80px;
-		height: 80px;
+		width: 70px;
+		height: 70px;
 	}
 
 	.mobile-shopping-bag {
@@ -304,6 +434,14 @@ header i {
 	}
 	.menu-button-line__after {
 		transform: translateY(11px);
+	}
+
+	#wrapper {
+		margin-top: 70px;
+	}
+
+	#home-section {
+		height: calc(100vh - 70px);
 	}
 }
 @media screen and (max-width: 340px) {
@@ -333,5 +471,13 @@ header i {
 	}
 	.menu-button-line__after {
 		transform: translateY(10px);
+	}
+
+	#wrapper {
+		margin-top: 67px;
+	}
+
+	#home-section {
+		height: calc(100vh - 67px);
 	}
 }
