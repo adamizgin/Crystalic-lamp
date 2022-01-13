@@ -50,10 +50,14 @@ function menuButtonClick() {
 
 		$('#mobile-menu').css({
 			'transform': 'translate(50%, -50%) scale(0)',
-			'border-radius': '50%',
-			'top': '35px',
-			'right': '35px'
+			'border-radius': '50%'
 		});
+		setTimeout(function() {
+			$('#mobile-menu').css({
+				'top': '35px',
+				'right': '35px'
+			});
+		}, 300);
 
 		$('#mobile-menu-content').fadeOut(150);
 
