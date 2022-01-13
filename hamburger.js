@@ -9,24 +9,21 @@ function menuButtonClick() {
 		menuOpen = true;
 
 		$('.menu-button-line__before').css({
-			'transform': 'rotate(45deg)',
-			'background': '#eee'
+			'transform': 'rotate(45deg)'
 		});
 		$('.menu-button-line__middle').css({
 			'transform': 'scale(1)',
 			'background': 'transparent'
 		});
 		$('.menu-button-line__after').css({
-			'transform': 'rotate(-45deg)',
-			'background': '#eee'
+			'transform': 'rotate(-45deg)'
 		});
 
 		$('#mobile-menu').css({
 			'transform': 'translate(0%, 0%) scale(1)',
 			'border-radius': '0',
-		});
-		$('h1').css({
-			'color': '#fff'
+			'top': '0',
+			'right': '0'
 		});
 
 		$('#mobile-menu-content').hide().fadeIn(1000);
@@ -41,24 +38,21 @@ function menuButtonClick() {
 		menuOpen = false;
 
 		$('.menu-button-line__before').css({
-			'transform': 'translateY(-13px)',
-			'background': '#333'
+			'transform': 'translateY(-13px)'
 		});
 		$('.menu-button-line__middle').css({
 			'transform': 'scale(1)',
 			'background': '#333'
 		});
 		$('.menu-button-line__after').css({
-			'transform': 'translateY(13px)',
-			'background': '#333'
-		});
-		$('h1').css({
-			'color': '#333'
+			'transform': 'translateY(13px)'
 		});
 
 		$('#mobile-menu').css({
 			'transform': 'translate(50%, -50%) scale(0)',
-			'border-radius': '50%'
+			'border-radius': '50%',
+			'top': '35px',
+			'right': '35px'
 		});
 
 		$('#mobile-menu-content').fadeOut(150);
