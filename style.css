@@ -69,7 +69,7 @@ section {
 header {
 	width: 100%;
     height: auto;
-    background: #fff;
+    background: #eee;
     position: fixed;
     top: 0;
     left: 0;
@@ -81,6 +81,8 @@ header {
 h1 {
 	font-family: 'Lato';
 	font-weight: 700;
+	color: #333;
+	transition: 500ms ease-in-out;
 }
 
 .header-right {
@@ -109,4 +111,144 @@ header h3 {
 
 header i {
 	font-size: 20px;
+}
+
+
+
+
+
+/* Mobile header view */
+
+.header-menu-button-wrapper {
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	width: 89px;
+	height: 89px;
+	display: none;
+	justify-content: center;
+	align-items: center;
+
+	transition: transform 350ms ease-in-out;
+}
+
+#mobile-menu-content * {
+	color: #fff;
+}
+
+.menu-lines-wrapper {
+	transform: rotate(0deg);
+	transition: 250ms ease-in-out;
+}
+
+.menu-button-line {
+	width: 40px;
+	height: 4px;
+	background: #333;
+	border-radius: 5px;
+	transition: all 200ms ease-in-out;
+}
+
+.menu-button-line__before, .menu-button-line__after {
+	position: absolute;
+	width: 40px;
+	height: 4px;
+	background: #333;
+	border-radius: 5px;
+	transition: all 200ms ease-in-out;
+}
+
+.menu-button-line__before {
+	transform: translateY(-13px);
+}
+.menu-button-line__after {
+	transform: translateY(13px);
+}
+
+#mobile-menu {
+	width: 100vw;
+	height: 100vh;
+	background: #556688f8;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: -1;
+	border-radius: 50%;
+	transform: translate(50%, -50%) scale(0);
+	transition: transform 350ms ease-in-out, border-radius 550ms ease-in-out;
+}
+
+#mobile-menu-content {
+	width: 100%;
+	height: calc(100% - 75px);
+	background: transparent;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 25px;
+}
+
+#mobile-menu-content * {
+	color: #eee;
+}
+
+#mobile-menu-content h2, #mobile-menu-content i {
+	display: block;
+	width: 100%;
+	padding: 25px;
+	font-size: 30px;
+	border-bottom: 1px solid #fff1;
+	background: transparent;
+	transition: all 250ms ease-in-out;
+}
+#mobile-menu-content h2:active {
+	background: #1111;
+}
+
+#mobile-menu-content h2:last-child {
+	border-bottom: none;
+}
+
+.mobile-shopping-bag {
+	font-size: 30px;
+	transition: 200ms ease-in-out;
+	position: absolute;
+	top: 50%;
+	right: 94px;
+	transform: translateY(-50%);
+	z-index: -1;
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsiveness */
+@media screen and (max-width: 770px) {
+	/* Phone screen */
+	.header-right {
+		display: none;
+	}
+
+	.header-menu-button-wrapper {
+		display: flex;
+	}
+
+	.mobile-shopping-bag {
+		display: block;
+	}
 }
