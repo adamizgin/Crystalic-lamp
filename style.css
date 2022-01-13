@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500&family=Lato:wght@700&display=swap');
+
+* {
+	margin:  0;
+	padding: 0;
+	font-family: Helvetica, Arial, Sans-Serif;
+	outline: none;
+	box-sizing: border-box;
+}
+
+html, body {
+	background: #fefefe;
+	overflow-x: hidden;
+	width: 100vw;
+	min-height: 100vh;
+}
+
+.no-select {
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+p, li {
+	font-size: 18px;
+	line-height: 25px;
+	margin: 0 0 10px 0;
+}
+
+a {
+	color: #00f;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#wrapper {
+	width: 100vw;
+	overflow-x: hidden;
+	margin-top: 89px;
+}
+
+section {
+	width: 100%;
+	min-height: 40vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Website style */
+
+header {
+	width: 100%;
+    height: auto;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    padding: 25px;
+	box-shadow: 0 0 10px #0003;
+}
+
+h1 {
+	font-family: 'Lato';
+	font-weight: 700;
+}
+
+.header-right {
+	position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: default;
+}
+
+.header-button {
+	height: 100%;
+    display: inline-block;
+    padding: 20px 10px;
+    cursor: pointer;
+    border-right: 1px solid #fff1;
+    background: transparent;
+}
+
+header h3 {
+	font-size: 1.5em;
+	font-family: 'M PLUS Rounded 1c';
+	font-weight: 300;
+	transition: 200ms ease-in-out;
+}
+
+header i {
+	font-size: 20px;
+}
